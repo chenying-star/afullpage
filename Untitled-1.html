@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.css" rel="stylesheet" />
+<style>
+body{
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	text-align:center;}
+	#header{
+		position:fixed;
+		top:0;
+		left:200px;}
+		#fullpageMenu{
+			position:fixed;
+			top:0;
+			z-index:999;}
+</style>
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="header">header</div>
+   <!-- <ul id="fullpageMenu">
+    <li data_menuanchor="page1" class="active"><a href="#page1">1section</a></li>
+    <li data_menuanchor="page2" ><a href="#page2">2section</a></li>
+    <li data_menuanchor="page3" ><a href="#page3">3section</a></li>
+    <li data_menuanchor="page4" ><a href="#page4">4section</a></li>
+    </ul>-->
+<div id="fullpage">
+<div class="section">内容一</div>
+<div class="section">内容二
+<div class="slide">slide1</div>
+<div class="slide">slide2</div>
+<div class="slide">slide3</div>
+<div class="slide">lide4</div>
+</div>
+<div class="section">内容三</div>
+<div class="section">内容四</div>
+</div>
+</body>
+</html>
+<script>
+$(function(){
+	$('#fullpage').fullpage({
+		sectionsColor:['green','brown','orange','pink'],
+		controlArrow:true,//默认true，表示slide的箭头
+		verticalCentered:true,//默认字体垂直居中
+		resize:true,//字体是否随屏幕大小变换
+		scrollingSpeed:700,//滚动速度moren 700
+		anchors:['page1','page2','page3','page4'],//锚链接
+		loopTop:false,//滚动到最低端是是否滚动到第一页，默认false
+		loopBottom:false,
+		loopHorizontal:true,//slide是否可以循环播放
+		scrollBar:false,//是否包滚动条，默认fals
+		paddingTop:'0px',//每个section离顶部的高度
+		paddingBottom:'0px',
+		fixedElements:'#header',//固定元素
+		keyboardScrolling:true,//是否可以用键盘，默认tru
+		continuousVertical:false,//页面是否循环滚动，默认false
+		animateAnchor:true,//是否用锚链接控制滚动
+		recordHistory:true,//是否记录历史，默认true
+		//menu:'#fullpageMenu',
+		navigation:true,//默认false，true会设置小圆点为导航
+		navigationPosition:'right',
+		navigationTooltips:['page1','page2','page3','page4'],
+		showActiveTooltip:false,//是否显示小圆提示点信，默认不显示息
+        slidesNavigation:false,//司法显示slide的导航，默认false
+		slidesNavPosition:'top',//位置
+		scrollOverflow:false,//内容满屏后是否显示滚动条，默认false，如果设置true，显示滚动条，如果要滚动查看内容，要jquery.slimscroll插件的配合
+		
+		
+			
+		})
+	});
+</script>
